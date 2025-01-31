@@ -1,59 +1,61 @@
- <div class="col-4">
-                            <div class="flex-column">
-                                <div class="p-2"><b>Comunidad</b></div>
-                                <div id="footer-media">
-                                    <br>
-                                    <div class="ml-4 img-fluid"><a href="https://google.com"><img src="media/twitterlogo.png"
-                                                width="50px" alt=""></a></div>
-                                    <div class="ml-1 mt-2 img-fluid"><a href="https://google.com"><img
-                                                src="media/instagramlogo.jpg" width="80px" alt=""></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4" id="quienesSomos">
-                            <div class="p-2 pr-4"><b>Quiénes somos</b></div>
-                            <div class="pr-2">
-                                <button type="button" class="btn btn-outline-dark botonesFooter">Quiénes somos</button>
-                                <button type="button" class="btn btn-outline-dark botonesFooter">Compromisos</button>
-                                <button type="button" class="btn btn-outline-dark botonesFooter">Nuestra historia</button>
-                                <button type="button" class="btn btn-outline-dark botonesFooter">Privacidad</button>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="p-2 pr-4"><b>Tecnologías usadas</b></div>
-                            <div></div>
-                            <img width="70px" src="media/Mastercard-logo.svg.png" alt=""><br>
-                            <img width="70px" src="media/visaLogo.png" alt=""><br>
-                            <img width="70px" src="media/paypalLogo.png" alt="">
-                        </div>
+<form method="post" action="//datos.php" class="was-validated">
+                <div class="input-group mt-3">
+                    <label for="country" class="input-group-text">País</label>
+                    <select name="country" class="form-control" id="pais">
+                        <option value="España">España</option>
+                        <option value="Estados Unidos">Estados Unidos</option>
+                        <option value="Reino Unido">Reino Unido</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Alemania">Alemania</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Japón">Japón</option>
+                        <option value="China">China</option>
+                        <option value="Rusia">Rusia</option>
+                        <option value="India">India</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="México">México</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Corea del Sur">Corea del Sur</option>
+                        <option value="Egipto">Egipto</option>
+                    </select>
+                </div>
+                <br>
 
+                <!--Contraseña-->
+                <div class="input-group mt-3">
+                    <label for="all" class="input-group-text">Estado | Localidad | Código postal</label>
+                    <input type="text" name="all" id="provincia" required placeholder="Ingrese su provincia"
+                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
+                    <input type="text" name="all" id="localidad" required placeholder="Ingrese su lacalidad"
+                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
+                    <input type="text" name="all" id="postal" required placeholder="Ingrese su CP"
+                        class="form-control" pattern="[0-9]{4,9}">
+                    <div class="valid-feedback">Formato correcto</div>
+                    <div class="invalid-feedback">No cumple el formato</div>
+                </div>
 
+                <br>
 
+                <div class="input-group mt-3">
+                    <label for="all" class="input-group-text">Calle | Número | Piso | Escalera</label>
+                    <input type="text" name="all" id="calle" required placeholder="Ingrese su calle"
+                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
+                    <input type="number" name="all" id="numero" required placeholder="Ingrese su número"
+                        class="form-control" pattern="{1,4}">
+                    <input type="number" name="all" id="piso" required placeholder="Ingrese su piso"
+                        class="form-control" pattern="[0-9º]{0,3}">
+                    <input type="number" name="all" id="escalera" required placeholder="Ingrese su escalera"
+                        class="form-control" pattern="[0-9]{0,2}">
+                    <div class="valid-feedback">Formato correcto</div>
+                    <div class="invalid-feedback">No cumple el formato</div>
+                </div>
 
+                <br>
 
-
-
-                        <ul id="listaComunidad">
-                                        <li><a href="https://x.com"
-                                                class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Twitter</a><img
-                                                src="media/twitterlogo.png" alt="" width="30px"></li>
-
-                                        <li><a href="https://instagram.com"
-                                                class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Instagram</a><img
-                                                src="media/instagramlogo.jpg" alt="" width="50px"></li>
-                                        <li><a href="https://facebook.com"
-                                                class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Facebook</a><img
-                                                src="media/facebookLogo.png" alt="" width="50px"></li>
-                                    </ul>
-
-
-
-
-
-                                    <button type="button" class="btn btn-outline-dark botonesFooter">Quiénes
-                                        somos</button>
-                                    <button type="button"
-                                        class="btn btn-outline-dark botonesFooter">Compromisos</button>
-                                    <button type="button" class="btn btn-outline-dark botonesFooter">Nuestra
-                                        historia</button>
-                                    <button type="button" class="btn btn-outline-dark botonesFooter">Privacidad</button>
+                
+                <label for="areatexto">Detalles sobre la entrega</label>
+                <textarea class="form-control" id="areatexto" rows="3" placeholder="EJ: Comentarios para el transportista"></textarea>
+                
+                <br>
+                <button type="submit" class="btn btn-success mt-4">Continuar</button>
+            </form>
