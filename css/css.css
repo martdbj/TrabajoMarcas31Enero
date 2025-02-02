@@ -3,11 +3,8 @@
 }
 
 #footer {
-    bottom: 0;
     width: 100%;
     left: 0;
-    
-    
 }
 
 #quienesSomos {
@@ -31,7 +28,7 @@
 }
 
 #listaComunidad {
-    list-style-type:circle;
+    list-style-type: circle;
 }
 
 #DatosCliente {
