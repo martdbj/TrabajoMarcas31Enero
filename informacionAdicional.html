@@ -66,10 +66,10 @@
                 <div class="input-group mt-3">
                     <label for="provincia" class="input-group-text">Estado/Provincia</label>
                     <input type="text" name="provincia" id="provincia" required placeholder="Ingrese su provincia"
-                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
+                        class="form-control" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,50}">
                     <label for="localidad" class="input-group-text">Localidad</label>
                     <input type="text" name="localidad" id="localidad" required placeholder="Ingrese su lacalidad"
-                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
+                        class="form-control" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,50}">
                     <label for="postal" class="input-group-text">Código postal</label>
                     <input type="text" name="postal" id="postal" required placeholder="Ingrese su CP"
                         class="form-control" pattern="[0-9]{4,9}">
@@ -82,7 +82,7 @@
                 <div class="input-group mt-3">
                     <label for="calle" class="input-group-text">Calle</label>
                     <input type="text" name="calle" id="calle" required placeholder="Ingrese su calle"
-                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
+                        class="form-control" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,50}">
                     <label for="number" class="input-group-text">Número</label>
                     <input type="number" name="number" id="numero" required placeholder="Ingrese su número"
                         class="form-control" pattern="{1,4}">
