@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="css/css.css">
     <title>Información para el pedido</title>
 </head>
-
 <body>
-    <a href="2-informacionAdicional.html">Paso de pagina</a>
     <div class="container centrado">
         <header class="bg-light">
             <nav class="navbar navbar-light bg-light">
@@ -26,13 +24,13 @@
                         <a href="#" class="nav-link text-dark">Datos del cliente</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark">Información adicional</a>
+                        <a href="#" class="nav-link text-secondary disabled">Información adicional</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark">Pedido</a>
+                        <a href="#" class="nav-link text-secondary disabled">Pedido</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark">Datos de pago</a>
+                        <a href="#" class="nav-link text-secondary disabled">Datos de pago</a>
                     </li>
                 </ul>
             </div>
@@ -40,7 +38,7 @@
         <div class="mt-5">
             <h2>Datos del cliente</h2>
             <br>
-            <form method="post" action="//datos.php" class="was-validated">
+            <form method="post" action="2-informacionAdicional.html" class="was-validated">
                 <div class="input-group mt-3">
                     <label for="uname" class="input-group-text">Nombre y apellido</label>
                     <input type="text" name="uname" id="uname" required placeholder="Nombre" class="form-control"
