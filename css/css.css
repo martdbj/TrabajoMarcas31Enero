@@ -33,3 +33,7 @@
 #listaComunidad {
     list-style-type:circle;
 }
+
+#DatosCliente {
+    justify-content: center;
+}
