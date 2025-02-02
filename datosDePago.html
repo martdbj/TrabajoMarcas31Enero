@@ -7,11 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/css.css">
-    <title>Información adicional</title>
+    <title>Datos de pago</title>
 </head>
 
 <body>
-    <div class="container container-fluid centrado">
+    <div class="container centrado">
         <header class="bg-light">
             <nav class="navbar navbar-light bg-light">
                 <a class="navbar-brand" href="#">
@@ -19,97 +19,95 @@
                     ReadBooks
                 </a>
             </nav>
-            <div id="nav">
-                <ul class="nav" id="DatosCliente"">
+            <div id="nav" class="">
+                <ul class="nav" id="DatosCliente">
                     <li class="nav-item">
                         <a href="#" class="nav-link text-secondary disabled">Datos del cliente</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark">Información adicional</a>
+                        <a href="#" class="nav-link text-secondary disabled">Información adicional</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link text-secondary disabled">Pedido</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary disabled">Datos de pago</a>
+                        <a href="#" class="nav-link text-dark">Datos de pago</a>
                     </li>
                 </ul>
             </div>
         </header>
         <div class="mt-5">
-            <h2>Información adicional</h2>
+            <h2>Datos de pago</h2>
             <br>
-            <form method="post" action="//datos.php" class="was-validated">
-                <div class="input-group mt-3">
-                    <label for="country" class="input-group-text">País</label>
-                    <select name="country" class="form-control" id="pais">
-                        <option value="España">España</option>
-                        <option value="Estados Unidos">Estados Unidos</option>
-                        <option value="Reino Unido">Reino Unido</option>
-                        <option value="Francia">Francia</option>
-                        <option value="Alemania">Alemania</option>
-                        <option value="Italia">Italia</option>
-                        <option value="Japón">Japón</option>
-                        <option value="China">China</option>
-                        <option value="Rusia">Rusia</option>
-                        <option value="India">India</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="México">México</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Corea del Sur">Corea del Sur</option>
-                        <option value="Egipto">Egipto</option>
-                    </select>
-                </div>
-                <br>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td scope="row"><b>Tarjeta de crédito</b><br><br>
+                            <img class="pagoLogos" src="media/Mastercard-logo.svg.png" alt="">
+                            <br>
+                            <img class="pagoLogos" src="media/visaLogo.png" alt="">
+                        </td>
+                        <td></td>
+                        <td>
+                            <form method="post" action="transacciónCompletada.html" class="was-validated">
+                                <div class="input-group mt-3">
+                                    <label for="uname" class="input-group-text">Número de tarjeta</label>
+                                    <input type="text" name="uname" id="uname" required placeholder="Nombre"
+                                        class="form-control" pattern="[0-9]{16}">
+                                    <div class="valid-feedback">Formato correcto</div>
+                                    <div class="invalid-feedback">No cumple el formato (16 números)</div>
+                                </div>
+                                <br>
 
-                <!--Contraseña-->
-                <div class="input-group mt-3">
-                    <label for="provincia" class="input-group-text">Estado/Provincia</label>
-                    <input type="text" name="provincia" id="provincia" required placeholder="Ingrese su provincia"
-                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
-                    <label for="localidad" class="input-group-text">Localidad</label>
-                    <input type="text" name="localidad" id="localidad" required placeholder="Ingrese su lacalidad"
-                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
-                    <label for="postal" class="input-group-text">Código postal</label>
-                    <input type="text" name="postal" id="postal" required placeholder="Ingrese su CP"
-                        class="form-control" pattern="[0-9]{4,9}">
-                    <div class="valid-feedback">Formato correcto</div>
-                    <div class="invalid-feedback">No cumple el formato</div>
-                </div>
+                                <!--Contraseña-->
+                                <div class="input-group mt-3">
+                                    <label for="caducidad" class="input-group-text">Caducidad(mm/yy)</label>
+                                    <input type="text" name="caducidad" id="caducidad" required
+                                        placeholder="Ingrese fecha de caducidad de su tarjeta" class="form-control"
+                                        pattern="[0-9\/]{5}">
+                                    <label for="cvv" class="input-group-text">CVV</label>
+                                    <input type="text" name="cvv" id="cvv" required
+                                        placeholder="Ingrese el CVV (3 números)" class="form-control"
+                                        pattern="[0-9]{3}">
+                                    <div class="valid-feedback">Formato correcto</div>
+                                    <div class="invalid-feedback">No cumple el formato</div>
+                                </div>
 
-                <br>
+                                <br>
 
-                <div class="input-group mt-3">
-                    <label for="calle" class="input-group-text">Calle</label>
-                    <input type="text" name="calle" id="calle" required placeholder="Ingrese su calle"
-                        class="form-control" pattern="[a-zA-Z\s]{2,50}">
-                    <label for="number" class="input-group-text">Número</label>
-                    <input type="number" name="number" id="numero" required placeholder="Ingrese su número"
-                        class="form-control" pattern="{1,4}">
-                    <label for="piso" class="input-group-text">Piso</label>
-                    <input type="number" name="piso" id="piso" required placeholder="Ingrese su piso"
-                        class="form-control" pattern="[0-9º]{0,3}">
-                    <label for="escalera" class="input-group-text">Escalera</label>
-                    <input type="number" name="escalera" id="escalera" required placeholder="Ingrese su escalera"
-                        class="form-control" pattern="[0-9]{0,2}">
-                    <div class="valid-feedback">Formato correcto</div>
-                    <div class="invalid-feedback">No cumple el formato</div>
-                </div>
+                                <!--Código postal-->
+                                <div class="input-group mt-3">
+                                    <label for="uname" class="input-group-text">Nombre y apellido</label>
+                                    <input type="text" name="uname" id="uname" required placeholder="Nombre" class="form-control"
+                                        pattern="[a-zA-Z0-9]{2,50}">
+                                    <input type="text" name="uname" id="uname" required placeholder="Apellido" class="form-control"
+                                        pattern="[a-zA-Z0-9\s]{2,50}">
+                                    <div class="valid-feedback">Formato correcto</div>
+                                    <div class="invalid-feedback">Nombre y apellidos (sin números)</div>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-success mt-4">Continuar</button>
+                            </form>
+                        </td>
 
-                <br>
+                    </tr>
+                    <tr>
+                        <td scope="row"><b>Paypall</b><br><br>
+                            <img src="" alt="">
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="https://www.paypal.com/es/home" target="_blank" ><img src="media/paypall.jpg" width="200px" alt=""></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <!--Código postal-->
-                <label for="areatexto">Detalles sobre la entrega</label>
-                <textarea class="form-control" id="areatexto" rows="3" placeholder="EJ: Comentarios para el transportista"></textarea>
-                
-                <br>
-                <button type="submit" class="btn btn-success mt-4">Continuar</button>
-            </form>
-        </div>
+        </div> <!--Fin container principal-->
         <footer>
             <div id="footer">
                 <div class="bg-light pb-4 p-3">
-                    <p><b> Información sobre nosotros</b></p>
+                    <p><b>Información sobre nosotros</b></p>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -168,12 +166,10 @@
                                     <img src="media/visaLogo.png" alt="">
                                 </div>
                             </div>
-                        </div>
+                        </div> <!--fin div footer-->
                     </div>
-                </div> <!--fin div footer-->
-            </div>
+                </div>
         </footer>
-    </div>
 </body>
 
 </html>
