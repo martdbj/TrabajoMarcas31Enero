@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/css.css">
     <title>Información para el pedido</title>
 </head>
+
 <body>
     <div class="container centrado">
         <header class="bg-light">
@@ -42,9 +43,11 @@
                 <div class="input-group mt-3">
                     <label for="uname" class="input-group-text">Nombre y apellido</label>
                     <input type="text" name="uname" id="uname" required placeholder="Nombre" class="form-control"
-                        pattern="[a-zA-Z0-9]{2,50}">
+                        pattern="[a-zA-Z\s]{2,50}">
                     <input type="text" name="uname" id="uname" required placeholder="Apellido" class="form-control"
-                        pattern="[a-zA-Z0-9\s]{2,50}">
+                        pattern="[a-zA-Z\s]{2,50}">
+                    <div class="valid-feedback">Formato correcto</div>
+                    <div class="invalid-feedback">Nombre y apellidos (sin números)</div>
                 </div>
                 <br>
 
@@ -53,9 +56,9 @@
                     <label for="email" class="input-group-text">Correo electrónico</label>
                     <input type="email" name="email" id="email" required placeholder="Ingrese su correo electrónico"
                         class="form-control" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}">
+                    <div class="valid-feedback">Formato correcto</div>
+                    <div class="invalid-feedback">No cumple el formato (@ requerida)</div>
                 </div>
-                <div class="valid-feedback">Formato correcto</div>
-                <div class="invalid-feedback">No cumple el formato</div>
                 <br>
 
                 <!--Código postal-->
@@ -86,7 +89,7 @@
                 <button type="submit" class="btn btn-success mt-4">Continuar</button>
             </form>
         </div>
-        
+
     </div> <!--Fin container principal-->
     <footer id="index">
         <div id="footer">
@@ -149,7 +152,7 @@
                                 <img src="media/visaLogo.png" alt="">
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
     </footer>
